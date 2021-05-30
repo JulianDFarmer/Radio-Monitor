@@ -1,0 +1,98 @@
+body {
+  font-family: Arial;
+}
+
+#placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+#header {
+  padding-bottom: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#page-header-title {
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+#page-header-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+.header-button {
+  font-size: 20px;
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  padding: 5px;
+  margin-right: 5px;
+  background-color: #CCCCCC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button-on {
+  background-color: #006600;
+  color: #ffffff;
+}
+
+#sync-button, #kill-button, #playone-button {
+  margin-left: 15px;
+}
+
+.category {
+  padding-bottom: 35px;
+}
+
+.hidden {
+  display: none;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.stations {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+}
+
+.station {
+
+  height: 75px;
+  padding: 5px;
+  margin: 0 5px 5px 0;
+  background-color: #CCCCCC;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.playing {
+  background-color: #006600;
+  color: #ffffff;
+}
+
+.loading{
+  background-color: #ffcc00;
+}

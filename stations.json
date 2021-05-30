@@ -1,0 +1,1631 @@
+{
+  "bbc-dom": {
+    "title": "BBC (Domestic Networks)",
+    "stations": {
+      "bbc-r1": {
+        "title": "BBC Radio 1",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_one.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_one.m3u8"
+      },
+      "bbc-r1x": {
+        "title": "BBC Radio 1Xtra",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_1xtra.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_1xtra.m3u8"
+      },
+      "bbc-r2": {
+        "title": "BBC Radio 2",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_two.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_two.m3u8"
+      },
+      "bbc-r3": {
+        "title": "BBC Radio 3",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_three.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_three.m3u8"
+      },
+      "bbc-r4fm": {
+        "title": "BBC Radio 4 (FM)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_fourfm.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_fourfm.m3u8"
+      },
+      "bbc-r4lw": {
+        "title": "BBC Radio 4 (LW)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_fourlw.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_fourlw.m3u8"
+      },
+      "bbc-r4x": {
+        "title": "BBC Radio 4 Extra",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_four_extra.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_four_extra.m3u8"
+      },
+      "bbc-r5l": {
+        "title": "BBC Radio 5 live",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_five_live.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_five_live.m3u8"
+      },
+      "bbc-r5lsx": {
+        "title": "BBC Radio 5 live Sports Extra",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_five_live_sports_extra.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_five_live_sports_extra.m3u8"
+      },
+      "bbc-r6m": {
+        "title": "BBC Radio 6 Music",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_6music.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_6music.m3u8"
+      },
+      "bbc-an": {
+        "title": "BBC Asian Network",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_asian_network.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_asian_network.m3u8"
+      },
+      "bbc-r1-dance": {
+        "title": "BBC Radio 1 Dance",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_one_dance.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_one_dance.m3u8"
+      },
+      "bbc-r1-relax": {
+        "title": "BBC Radio 1 Relax",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_one_relax.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_one_relax.m3u8"
+      },
+      "bbc-cbeebies": {
+        "title": "CBeebies Radio",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/cbeebies_radio.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/cbeebies_radio.m3u8"
+      }
+    }
+  },
+  "bbc-nat": {
+    "title": "BBC (Nations)",
+	"bbcnations": true,
+    "stations": {
+      "bbc-rscotfm": {
+        "title": "BBC Radio Scotland (FM)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_scotland_fm.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_scotland_fm.m3u8"
+      },
+      "bbc-rscotmw": {
+        "title": "BBC Radio Scotland (MW)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_scotland_mw.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_scotland_mw.m3u8"
+      },
+      "bbc-rshetland": {
+        "title": "BBC Radio Shetland",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_shetland.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_shetland.m3u8"
+      },
+      "bbc-rorkney": {
+        "title": "BBC Radio Orkney",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_orkney.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_orkney.m3u8"
+      },
+      "bbc-nangaid": {
+        "title": "BBC nan Gàidheal",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_nan_gaidheal.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_nan_gaidheal.m3u8"
+      },
+      "bbc-rwalesfm": {
+        "title": "BBC Radio Wales (FM)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_wales_fm.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_wales_fm.m3u8"
+      },
+      "bbc-rwalesmw": {
+        "title": "BBC Radio Wales (MW)",
+        "hls": false,
+        "url": "http://bbcmedia.ic.llnwd.net/stream/bbcmedia_walesmw_mf_p"
+      },
+      "bbc-rcymru": {
+        "title": "BBC Radio Cymru",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_cymru.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_cymru.m3u8"
+      },
+      "bbc-rcymru2": {
+        "title": "BBC Radio Cymru 2",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_cymru_2.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_cymru_2.m3u8"
+      },
+      "bbc-rulster": {
+        "title": "BBC Radio Ulster",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_ulster.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_ulster.m3u8"
+      },
+      "bbc-rfoyle": {
+        "title": "BBC Radio Foyle",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_foyle.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_foyle.m3u8"
+      }
+    }
+  },
+  "bbc-ws": {
+    "title": "BBC World Service (English Networks)",
+	"bbcws": true,
+    "stations": {
+      "bbc-ws-einws": {
+        "title": "WSE Internet News (EINWS)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_world_service_news_internet.m3u8"
+      },
+      "bbc-ws-eieuk": {
+        "title": "WSE UK (EIEUK)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_world_service.m3u8"
+      },
+      "bbc-ws-enafw": {
+        "title": "WSE West Africa (ENAFW)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_world_service_west_africa.m3u8"
+      },
+      "bbc-ws-enafe": {
+        "title": "WSE East Africa (ENAFE)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_world_service_east_africa.m3u8"
+      },
+      "bbc-ws-ename": {
+        "title": "WSE Americas (ENAME)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_world_service_americas.m3u8"
+      },
+      "bbc-ws-enase": {
+        "title": "WSE East Asia (ENASE)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_world_service_east_asia.m3u8"
+      },
+      "bbc-ws-enass": {
+        "title": "WSE South Asia (ENASS)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_world_service_south_asia.m3u8"
+      },
+	  "bbc-ws-ennzl": {
+        "title": "WSE Australasia (ENNZL)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_world_service_australasia.m3u8"
+      },
+      "bbc-ws-eneur": {
+        "title": "WSE Europe (ENEUR)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_world_service_europe.m3u8"
+      }
+	}
+  },
+  "bbc-wslang": {
+    "title": "BBC World Service (Language Services)",
+	"bbcws": true,
+	"stations": {
+      "bbc-ws-afgha": {
+        "title": "BBC Afghan (AFGHA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_afghan_radio.m3u8"
+      },
+      "bbc-ws-daria": {
+        "title": "BBC Afghan, Dari (DARIA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_dari_radio.m3u8"
+      },
+      "bbc-ws-pasha": {
+        "title": "BBC Afghan, Pashto (PASHA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_pashto_radio.m3u8"
+      },
+      "bbc-ws-frena": {
+        "title": "BBC Afrique (FRENA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_afrique_radio.m3u8"
+      },
+      "bbc-ws-amharic": {
+        "title": "BBC Amharic",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_amharic_radio.m3u8"
+      },
+      "bbc-ws-araba": {
+        "title": "BBC Arabic Radio (ARABA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_arabic_radio.m3u8"
+      },
+      "bbc-ws-benga": {
+        "title": "BBC Bengali (BENGA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_bangla_radio.m3u8"
+      },
+      "bbc-ws-burma": {
+        "title": "BBC Burmese (BURMA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_burmese_radio.m3u8"
+      },
+      "bbc-ws-canta": {
+        "title": "BBC Cantonese (CANTA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_cantonese_radio.m3u8"
+      },
+	  "bbc-ws-krwna": {
+        "title": "BBC Gahuza (KRWNA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_gahuza_radio.m3u8"
+      },
+      "bbc-ws-hausa": {
+        "title": "BBC Hausa (HAUSA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_hausa_radio.m3u8"
+      },
+      "bbc-ws-hinda": {
+        "title": "BBC Hindi (HINDA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_hindi_radio.m3u8"
+      },
+      "bbc-ws-indoa": {
+        "title": "BBC Indonesian (INDOA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_indonesian_radio.m3u8"
+      },
+      "bbc-ws-korea": {
+        "title": "BBC Korean (KOREA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_korean_radio.m3u8"
+      },
+      "bbc-ws-kirga": {
+        "title": "BBC Kyrgyz (KIRGA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_kyrgyz_radio.m3u8"
+      },
+      "bbc-ws-nepla": {
+        "title": "BBC Nepali (NEPLA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_nepali_radio.m3u8"
+      },
+      "bbc-ws-oromo": {
+        "title": "BBC Afaan Oromo",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_oromo_radio.m3u8"
+      },
+      "bbc-ws-farsa": {
+        "title": "BBC Persian Radio (FARSA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_persian_radio.m3u8"
+      },
+      "bbc-ws-sinha": {
+        "title": "BBC Sinhala (SINHA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_sinhala_radio.m3u8"
+      },
+      "bbc-ws-somla": {
+        "title": "BBC Somali (SOMLA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_somali_radio.m3u8"
+      },
+      "bbc-ws-swaha": {
+        "title": "BBC Swahili (SWAHA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_swahili_radio.m3u8"
+      },
+      "bbc-ws-tamla": {
+        "title": "BBC Tamil (TAMLA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_tamil_radio.m3u8"
+      },
+	  "bbc-ws-tigrinya": {
+        "title": "BBC Tigrinya",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_tigrinya_radio.m3u8"
+      },
+      "bbc-ws-urdua": {
+        "title": "BBC Urdu (URDUA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_urdu_radio.m3u8"
+      },
+      "bbc-ws-uzbka": {
+        "title": "BBC Uzbek (UZBKA)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_uzbek_radio.m3u8"
+      }
+    }
+  },
+  "bbc-lr": {
+    "title": "BBC (Local Radio)",
+	"local": true,
+    "stations": {
+      "bbc-lr-berks": {
+        "title": "BBC Radio Berkshire",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_berkshire.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_berkshire.m3u8"
+      },
+      "bbc-lr-bris": {
+        "title": "BBC Radio Bristol",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_bristol.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_bristol.m3u8"
+      },
+      "bbc-lr-cambs": {
+        "title": "BBC Radio Cambridgeshire",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_cambridge.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_cambridge.m3u8"
+      },
+      "bbc-lr-cornw": {
+        "title": "BBC Radio Cornwall",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_cornwall.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_cornwall.m3u8"
+      },
+      "bbc-lr-cwr": {
+        "title": "BBC CWR",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_coventry_warwickshire.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_coventry_warwickshire.m3u8"
+      },
+      "bbc-lr-cumbr": {
+        "title": "BBC Radio Cumbria",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_cumbria.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_cumbria.m3u8"
+      },
+      "bbc-lr-derby": {
+        "title": "BBC Radio Derby",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_derby.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_derby.m3u8"
+      },
+      "bbc-lr-devon": {
+        "title": "BBC Radio Devon",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_devon.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_devon.m3u8"
+      },
+      "bbc-lr-essex": {
+        "title": "BBC Essex",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_essex.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_essex.m3u8"
+      },
+      "bbc-lr-glocs": {
+        "title": "BBC Radio Gloucestershire",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_gloucestershire.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_gloucestershire.m3u8"
+      },
+      "bbc-lr-gurnsy": {
+        "title": "BBC Radio Guernsey",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_guernsey.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_guernsey.m3u8"
+      },
+      "bbc-lr-handw": {
+        "title": "BBC Hereford & Worcester",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_hereford_worcester.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_hereford_worcester.m3u8"
+      },
+      "bbc-lr-humbr": {
+        "title": "BBC Radio Humberside",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_humberside.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_humberside.m3u8"
+      },
+      "bbc-lr-jersy": {
+        "title": "BBC Radio Jersey",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_jersey.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_jersey.m3u8"
+      },
+      "bbc-lr-kent": {
+        "title": "BBC Radio Kent",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_kent.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_kent.m3u8"
+      },
+      "bbc-lr-lancs": {
+        "title": "BBC Radio Lancashire",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_lancashire.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_lancashire.m3u8"
+      },
+      "bbc-lr-leeds": {
+        "title": "BBC Radio Leeds",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_leeds.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_leeds.m3u8"
+      },
+      "bbc-lr-leics": {
+        "title": "BBC Radio Leicester",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_leicester.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_leicester.m3u8"
+      },
+      "bbc-lr-lincs": {
+        "title": "BBC Radio Lincolnshire",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_lincolnshire.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_lincolnshire.m3u8"
+      },
+      "bbc-lr-londn": {
+        "title": "BBC Radio London",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_london.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_london.m3u8"
+      },
+      "bbc-lr-mancs": {
+        "title": "BBC Radio Manchester",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_manchester.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_manchester.m3u8"
+      },
+      "bbc-lr-mersy": {
+        "title": "BBC Radio Mersyside",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_merseyside.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_merseyside.m3u8"
+      },
+      "bbc-lr-newc": {
+        "title": "BBC Radio Newcastle",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_newcastle.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_newcastle.m3u8"
+      },
+      "bbc-lr-norfk": {
+        "title": "BBC Radio Norfolk",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_norfolk.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_norfolk.m3u8"
+      },
+      "bbc-lr-nhants": {
+        "title": "BBC Radio Northampton",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_northampton.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_northampton.m3u8"
+      },
+      "bbc-lr-notts": {
+        "title": "BBC Radio Nottingham",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_nottingham.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_nottingham.m3u8"
+      },
+      "bbc-lr-oxfrd": {
+        "title": "BBC Radio Oxford",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_oxford.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_oxford.m3u8"
+      },
+      "bbc-lr-sheff": {
+        "title": "BBC Radio Sheffield",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_sheffield.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_sheffield.m3u8"
+      },
+      "bbc-lr-shrop": {
+        "title": "BBC Radio Shropshire",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_shropshire.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_shropshire.m3u8"
+      },
+      "bbc-lr-solnt": {
+        "title": "BBC Radio Solent",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_solent.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_solent.m3u8"
+      },
+      "bbc-lr-solnt2": {
+        "title": "BBC Radio Solent (West Dorset)",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_solent_west_dorset.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_solent_west_dorset.m3u8"
+      },
+      "bbc-lr-somst": {
+        "title": "BBC Radio Somerset",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_somerset_sound.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_somerset_sound.m3u8"
+      },
+      "bbc-lr-stoke": {
+        "title": "BBC Radio Stoke",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_stoke.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_stoke.m3u8"
+      },
+      "bbc-lr-suffk": {
+        "title": "BBC Radio Suffolk",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_suffolk.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_suffolk.m3u8"
+      },
+      "bbc-lr-surry": {
+        "title": "BBC Radio Surrey",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_surrey.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_surrey.m3u8"
+      },
+      "bbc-lr-sussx": {
+        "title": "BBC Radio Sussex",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_sussex.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_sussex.m3u8"
+      },
+      "bbc-lr-tees": {
+        "title": "BBC Radio Tees",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_tees.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_tees.m3u8"
+      },
+      "bbc-lr-3cr": {
+        "title": "BBC Three Counties Radio",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_three_counties_radio.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_three_counties_radio.m3u8"
+      },
+      "bbc-lr-wilts": {
+        "title": "BBC Radio Wiltshire",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_wiltshire.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_wiltshire.m3u8"
+      },
+      "bbc-lr-wm": {
+        "title": "BBC Radio WM",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_wm.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_wm.m3u8"
+      },
+      "bbc-lr-york": {
+        "title": "BBC Radio York",
+        "hls": true,
+        "url": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_high/ak/bbc_radio_york.m3u8",
+        "url-lo": "http://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/hls/uk/sbr_low/ak/bbc_radio_york.m3u8"
+      }
+    }
+  },
+  "global": {
+    "title": "Global / Communicorp (National Networks)",
+    "stations": {
+      "global-bigtop40": {
+        "title": "Big Top 40",
+        "url": "https://media-ice.musicradio.com/BigTop40MP3"
+      },
+      "global-cap-uk": {
+        "title": "Capital UK",
+        "url": "http://media-ice.musicradio.com/CapitalUKMP3"
+      },
+      "global-cap-dance": {
+        "title": "Capital Dance",
+        "url": "https://media-ice.musicradio.com/CapitalDanceMP3"
+      },
+      "global-cap-xtra-uk": {
+        "title": "Capital XTRA",
+        "url": "https://media-ice.musicradio.com/CapitalXTRANationalMP3"
+      },
+      "global-cap-xtra-reloaded": {
+        "title": "Capital XTRA Reloaded",
+        "url": "https://media-ice.musicradio.com/CapitalXTRAReloadedMP3"
+      },
+      "global-classicfm": {
+        "title": "Classic FM",
+        "url": "https://media-ice.musicradio.com/ClassicFMMP3"
+      },
+      "global-gold": {
+        "title": "Gold",
+        "url": "https://media-ice.musicradio.com/GoldMP3"
+      },
+      "global-heart-uk": {
+        "title": "Heart UK",
+        "url": "https://media-ice.musicradio.com/HeartUKMP3"
+      },
+      "global-heart-70s": {
+        "title": "Heart 70s",
+        "url": "https://media-ice.musicradio.com/Heart70s"
+      },
+      "global-heart-80s": {
+        "title": "Heart 80s",
+        "url": "https://media-ice.musicradio.com/Heart80sMP3"
+      },
+      "global-heart-90s": {
+        "title": "Heart 90s",
+        "url": "https://media-ice.musicradio.com/Heart90sMP3"
+      },
+      "global-heart-dance": {
+        "title": "Heart Dance",
+        "url": "https://media-ice.musicradio.com/HeartDanceMP3"
+      },
+      "global-heart-xmas": {
+        "title": "Heart Xmas",
+        "url": "https://media-ice.musicradio.com/HeartXmasMP3"
+      },
+      "global-lbc-uk": {
+        "title": "LBC UK",
+        "url": "https://media-ice.musicradio.com/LBCUKMP3"
+      },
+	  "global-lbc-london": {
+        "title": "LBC London",
+        "url": "https://media-ice.musicradio.com/LBCLondonMP3"
+      },
+      "global-lbc-news-uk": {
+        "title": "LBC News UK",
+        "url": "https://media-ice.musicradio.com/LBCNewsUKMP3"
+      },
+      "global-lbc-news-london": {
+        "title": "LBC News London",
+        "url": "https://media-ice.musicradio.com/LBCNewsLondonMP3"
+      },
+      "global-radiox-uk": {
+        "title": "Radio X UK",
+        "url": "https://media-ice.musicradio.com/RadioXUKMP3"
+      },
+      "global-radiox-london": {
+        "title": "Radio X London",
+        "url": "https://media-ice.musicradio.com/RadioXLondonMP3"
+      },
+      "global-radiox-manchester": {
+        "title": "Radio X Manchester",
+        "url": "https://media-ice.musicradio.com/RadioXManchesterMP3"
+      },
+      "global-smooth-uk": {
+        "title": "Smooth",
+        "url": "https://media-ice.musicradio.com/SmoothUKMP3"
+      },
+      "global-smooth-chill": {
+        "title": "Smooth Chill",
+        "url": "https://media-ice.musicradio.com/SmoothChillMP3"
+      },
+      "global-smooth-country": {
+        "title": "Smooth Country",
+        "url": "https://media-ice.musicradio.com/SmoothCountryMP3"
+      },
+      "global-xs-manchester": {
+        "title": "XS Manchester",
+        "url": "https://media-ice.musicradio.com/RealXSManchesterMP3"
+      }
+    }
+  },
+  "global-cap": {
+    "title": "Global / Communicorp (Capital Network)",
+	"local": true,
+    "stations": {
+      "global-cap-uk": {
+        "title": "Capital UK",
+        "url": "https://media-ice.musicradio.com/CapitalUKMP3"
+      },
+      "global-cap-birmingham": {
+        "title": "Capital Birmingham",
+        "url": "https://media-ice.musicradio.com/CapitalBirminghamMP3"
+      },
+      "global-cap-brighton": {
+        "title": "Capital Brighton",
+        "url": "https://media-ice.musicradio.com/CapitalBrightonMP3"
+      },
+      "global-cap-coventry": {
+        "title": "Capital Coventry",
+        "url": "https://media-ice.musicradio.com/CapitalCoventryMP3"
+      },
+      "global-cap-derbyshire": {
+        "title": "Capital Derbyshire",
+        "url": "https://media-ice.musicradio.com/CapitalDerbyshireMP3"
+      },
+      "global-cap-edinburgh": {
+        "title": "Capital Edinburgh",
+        "url": "https://media-ice.musicradio.com/CapitalEdinburghMP3"
+      },
+      "global-cap-glasgow": {
+        "title": "Capital Glasgow",
+        "url": "https://media-ice.musicradio.com/CapitalGlasgowMP3"
+      },
+      "global-cap-burnley": {
+        "title": "Capital Lancashire (Burnley)",
+        "url": "https://media-ice.musicradio.com/CapitalBurnleyMP3"
+      },
+      "global-cap-preston": {
+        "title": "Capital Lancashire (Preston)",
+        "url": "https://media-ice.musicradio.com/CapitalPrestonMP3"
+      },
+      "global-cap-leicestershire": {
+        "title": "Capital Leicestershire",
+        "url": "https://media-ice.musicradio.com/CapitalLeicestershireMP3"
+      },
+      "global-cap-liverpool": {
+        "title": "Capital Liverpool",
+        "url": "https://media-ice.musicradio.com/CapitalLiverpoolMP3"
+      },
+      "global-cap-london": {
+        "title": "Capital London",
+        "url": "https://media-ice.musicradio.com/CapitalMP3"
+      },
+      "global-cap-manchester": {
+        "title": "Capital Manchester",
+        "url": "https://media-ice.musicradio.com/CapitalManchesterMP3"
+      },
+      "global-cap-nottinghamshire": {
+        "title": "Capital Nottinghamshire",
+        "url": "https://media-ice.musicradio.com/CapitalNottinghamshireMP3"
+      },
+      "global-cap-rugby": {
+        "title": "Capital Rugby",
+        "url": "https://media-ice.musicradio.com/CapitalRugbyMP3"
+      },
+      "global-cap-southcoast": {
+        "title": "Capital South Coast",
+        "url": "https://media-ice.musicradio.com/CapitalSouthCoastMP3"
+      },
+      "global-cap-eaststaffs": {
+        "title": "Capital East Staffordshire",
+        "url": "https://media-ice.musicradio.com/CapitalEastStaffordshireMP3"
+      },
+      "global-cap-stratford": {
+        "title": "Capital Stratford",
+        "url": "https://media-ice.musicradio.com/CapitalStratfordMP3"
+      },
+      "global-cap-teesside": {
+        "title": "Capital Teesside",
+        "url": "https://media-ice.musicradio.com/CapitalTeessideMP3"
+      },
+      "global-cap-tynewear": {
+        "title": "Capital Tyne & Wear",
+        "url": "https://media-ice.musicradio.com/CapitalTyneWearMP3"
+      },
+      "global-cap-southwales": {
+        "title": "Capital South Wales",
+        "url": "https://media-ice.musicradio.com/CapitalSouthWalesMP3"
+      },
+      "global-cap-walescoast": {
+        "title": "Capital North Wales Coast",
+        "url": "https://media-ice.musicradio.com/CapitalWalesCoastMP3"
+      },
+      "global-cap-cymru": {
+        "title": "Capital North Wales (Anglesey & Gwynedd)",
+        "url": "https://media-ice.musicradio.com/CapitalCymruMP3"
+      },
+      "global-cap-warwick": {
+        "title": "Capital Warwick",
+        "url": "https://media-ice.musicradio.com/CapitalWarwickMP3"
+      },
+      "global-cap-wirral": {
+        "title": "Capital Wirral",
+        "url": "https://media-ice.musicradio.com/CapitalWirralMP3"
+      },
+      "global-cap-wrexham": {
+        "title": "Capital Wrexham & Cheshire",
+        "url": "https://media-ice.musicradio.com/CapitalWrexhamMP3"
+      },
+      "global-cap-yorkshireeast": {
+        "title": "Capital Yorkshire (East)",
+        "url": "https://media-ice.musicradio.com/CapitalYorkshireEastMP3"
+      },
+      "global-cap-yorkshiresouthwest": {
+        "title": "Capital Yorkshire (South & West)",
+        "url": "https://media-ice.musicradio.com/CapitalYorkshireSouthWestMP3"
+      }
+	}
+  },
+  "global-heart": {
+    "title": "Global / Communicorp (Heart Network)",
+	"local": true,
+    "stations": {
+      "global-heart-uk": {
+        "title": "Heart UK",
+        "url": "https://media-ice.musicradio.com/HeartUKMP3"
+      },
+      "global-heart-bath": {
+        "title": "Heart Bath",
+        "url": "https://media-ice.musicradio.com/HeartBathMP3"
+      },
+      "global-heart-bedfordshire": {
+        "title": "Heart Bedfordshire (Bedford)",
+        "url": "https://media-ice.musicradio.com/HeartBedfordshireMP3"
+      },
+      "global-heart-bedsbucksherts": {
+        "title": "Heart Bedfordshire (Luton)",
+        "url": "https://media-ice.musicradio.com/HeartBedsBucksHertsMP3"
+      },
+      "global-heart-berkshire": {
+        "title": "Heart Berkshire",
+        "url": "https://media-ice.musicradio.com/HeartBerkshireMP3"
+      },
+      "global-heart-bristol": {
+        "title": "Heart Bristol",
+        "url": "https://media-ice.musicradio.com/HeartBristolMP3"
+      },
+      "global-heart-cambridge": {
+        "title": "Heart Cambridge",
+        "url": "https://media-ice.musicradio.com/HeartCambridgeMP3"
+      },
+      "global-heart-cornwall": {
+        "title": "Heart Cornwall",
+        "url": "https://media-ice.musicradio.com/HeartCornwallMP3"
+      },
+      "global-heart-crawley": {
+        "title": "Heart Crawley",
+        "url": "https://media-ice.musicradio.com/HeartCrawleyMP3"
+      },
+      "global-heart-northdevon": {
+        "title": "Heart Devon (Barnstaple)",
+        "url": "https://media-ice.musicradio.com/HeartNorthDevonMP3"
+      },
+      "global-heart-eastdevon": {
+        "title": "Heart Devon (Exeter)",
+        "url": "https://media-ice.musicradio.com/HeartEastDevonMP3"
+      },
+      "global-heart-southhams": {
+        "title": "Heart Devon (South Hams)",
+        "url": "https://media-ice.musicradio.com/HeartSouthHamsMP3"
+      },
+      "global-heart-torbay": {
+        "title": "Heart Devon (Torbay)",
+        "url": "https://media-ice.musicradio.com/HeartTorbay"
+      },
+      "global-heart-dorset": {
+        "title": "Heart Dorset",
+        "url": "https://media-ice.musicradio.com/HeartDorsetMP3"
+      },
+      "global-heart-essex": {
+        "title": "Heart Essex (Chelmsford)",
+        "url": "https://media-ice.musicradio.com/HeartEssexMP3"
+      },
+      "global-heart-colchester": {
+        "title": "Heart Essex (Colchester)",
+        "url": "https://media-ice.musicradio.com/HeartColchesterMP3"
+      },
+      "global-heart-harlow": {
+        "title": "Heart Essex (Harlow)",
+        "url": "https://media-ice.musicradio.com/HeartHarlowMP3"
+      },
+      "global-heart-gloucestershire": {
+        "title": "Heart Gloucestershire",
+        "url": "https://media-ice.musicradio.com/HeartGloucestershireMP3"
+      },
+      "global-heart-hampshire": {
+        "title": "Heart Hampshire",
+        "url": "https://media-ice.musicradio.com/HeartHampshireMP3"
+      },
+      "global-heart-northherts": {
+        "title": "Heart North Hertfordshire",
+        "url": "https://media-ice.musicradio.com/HeartHertsNorthMP3"
+      },
+      "global-heart-southherts": {
+        "title": "Heart South Hertfordshire",
+        "url": "https://media-ice.musicradio.com/Heart"
+      },
+      "global-heart-kent": {
+        "title": "Heart Kent",
+        "url": "https://media-ice.musicradio.com/HeartKentMP3"
+      },
+      "global-heart-northlancs": {
+        "title": "Heart North Lancs & Cumbria",
+        "url": "https://media-ice.musicradio.com/HeartNorthLancsCumbriaMP3"
+      },
+      "global-heart-london": {
+        "title": "Heart London",
+        "url": "https://media-ice.musicradio.com/HeartLondonMP3"
+      },
+      "global-heart-miltonkeynes": {
+        "title": "Heart Milton Keynes",
+        "url": "https://media-ice.musicradio.com/HeartMiltonKeynesMP3"
+      },
+      "global-heart-norfolk": {
+        "title": "Heart Norfolk",
+        "url": "https://media-ice.musicradio.com/HeartNorfolkMP3"
+      },
+      "global-heart-northamptonshire": {
+        "title": "Heart Northamptonshire",
+        "url": "https://media-ice.musicradio.com/HeartNorthamptonshireMP3"
+      },
+      "global-heart-northwest": {
+        "title": "Heart North West",
+        "url": "https://media-ice.musicradio.com/HeartNorthWestMP3"
+      },
+      "global-heart-oxfordshire": {
+        "title": "Heart Oxfordshire",
+        "url": "https://media-ice.musicradio.com/HeartOxfordshireMP3"
+      },
+      "global-heart-peterborough": {
+        "title": "Heart Peterborough",
+        "url": "https://media-ice.musicradio.com/HeartPeterboroughMP3"
+      },
+      "global-heart-plymouth": {
+        "title": "Heart Plymouth",
+        "url": "https://media-ice.musicradio.com/HeartPlymouthMP3"
+      },
+      "global-heart-glasgow": {
+        "title": "Heart Scotland (West)",
+        "url": "https://media-ice.musicradio.com/HeartGlasgowMP3"
+      },
+      "global-heart-edinburgh": {
+        "title": "Heart Scotland (East)",
+        "url": "https://media-ice.musicradio.com/HeartEdinburghMP3"
+      },
+      "global-heart-somerset": {
+        "title": "Heart Somerset",
+        "url": "https://media-ice.musicradio.com/HeartSomersetMP3"
+      },
+      "global-heart-suffolk": {
+        "title": "Heart Suffolk",
+        "url": "https://media-ice.musicradio.com/HeartSuffolkMP3"
+      },
+      "global-heart-sussex": {
+        "title": "Heart Sussex",
+        "url": "https://media-ice.musicradio.com/HeartSussexMP3"
+      },
+      "global-heart-teeside": {
+        "title": "Heart Teesside",
+        "url": "https://media-ice.musicradio.com/HeartTeessideMP3"
+      },
+      "global-heart-tynewear": {
+        "title": "Heart Tyne & Wear",
+        "url": "https://media-ice.musicradio.com/HeartTyneWearMP3"
+      },
+      "global-heart-westmids": {
+        "title": "Heart West Midlands",
+        "url": "https://media-ice.musicradio.com/HeartWestMidsMP3"
+      },
+      "global-heart-northwales": {
+        "title": "Heart Wales (North)",
+        "url": "https://media-ice.musicradio.com/HeartNorthWalesMP3"
+      },
+      "global-heart-southwales": {
+        "title": "Heart Wales (South)",
+        "url": "https://media-ice.musicradio.com/HeartSouthWalesMP3"
+      },
+      "global-heart-westwales": {
+        "title": "Heart Wales (West)",
+        "url": "https://media-ice.musicradio.com/HeartWestWalesMP3"
+      },
+      "global-heart-wiltshire": {
+        "title": "Heart Wiltshire",
+        "url": "https://media-ice.musicradio.com/HeartWiltshireMP3"
+      },
+      "global-heart-yorkshire": {
+        "title": "Heart Yorkshire",
+        "url": "https://media-ice.musicradio.com/HeartYorkshireMP3"
+      }
+	}
+  },
+  "global-smooth": {
+    "title": "Global / Communicorp (Smooth Network)",
+	"local": true,
+    "stations": {
+      "global-smooth-uk": {
+        "title": "Smooth UK",
+        "url": "https://media-ice.musicradio.com/SmoothUKMP3"
+      },
+      "global-smooth-berkshire": {
+        "title": "Smooth Berkshire & North Hampshire",
+        "url": "https://media-ice.musicradio.com/SmoothBerkshireMP3"
+      },
+      "global-smooth-bristol": {
+        "title": "Smooth Bristol & Bath",
+        "url": "https://media-ice.musicradio.com/SmoothBristolMP3"
+      },
+      "global-smooth-derby": {
+        "title": "Smooth Derby",
+        "url": "https://media-ice.musicradio.com/SmoothDerbyMP3"
+      },
+      "global-smooth-dorset": {
+        "title": "Smooth Dorset",
+        "url": "https://media-ice.musicradio.com/SmoothDorsetMP3"
+      },
+      "global-smooth-essex": {
+        "title": "Smooth Essex",
+        "url": "https://media-ice.musicradio.com/SmoothEssexMP3"
+      },
+      "global-smooth-gloucester": {
+        "title": "Smooth Gloucester",
+        "url": "https://media-ice.musicradio.com/SmoothGloucesterMP3"
+      },
+      "global-smooth-hampshire": {
+        "title": "Smooth Hampshire",
+        "url": "https://media-ice.musicradio.com/SmoothHampshireMP3"
+      },
+      "global-smooth-hertsbedsbucks": {
+        "title": "Smooth Herts, Beds & Bucks",
+        "url": "https://media-ice.musicradio.com/SmoothHertsMP3"
+      },
+      "global-smooth-kent": {
+        "title": "Smooth Kent",
+        "url": "https://media-ice.musicradio.com/SmoothKentMP3"
+      },
+      "global-smooth-lakedistrict": {
+        "title": "Smooth Lake District",
+        "url": "https://media-ice.musicradio.com/SmoothLakeDistrictMP3"
+      },
+      "global-smooth-london": {
+        "title": "Smooth London",
+        "url": "https://media-ice.musicradio.com/SmoothLondonMP3"
+      },
+      "global-smooth-eastmids": {
+        "title": "Smooth East Midlands",
+        "url": "https://media-ice.musicradio.com/SmoothEastMidsMP3"
+      },
+      "global-smooth-westmids": {
+        "title": "Smooth West Midlands",
+        "url": "https://media-ice.musicradio.com/SmoothWestMidsMP3"
+      },
+      "global-smooth-norfolk": {
+        "title": "Smooth Norfolk",
+        "url": "https://media-ice.musicradio.com/SmoothNorfolkMP3"
+      },
+      "global-smooth-northants": {
+        "title": "Smooth Northants",
+        "url": "https://media-ice.musicradio.com/SmoothNorthantsMP3"
+      },
+      "global-smooth-northeastn": {
+        "title": "Smooth North East (North)",
+        "url": "https://media-ice.musicradio.com/SmoothNorthEastNMP3"
+      },
+      "global-smooth-northeasts": {
+        "title": "Smooth North East (South)",
+        "url": "https://media-ice.musicradio.com/SmoothNorthEastSMP3"
+      },
+      "global-smooth-northwest": {
+        "title": "Smooth North West",
+        "url": "https://media-ice.musicradio.com/SmoothNorthWestMP3"
+      },
+      "global-smooth-plymouth": {
+        "title": "Smooth Plymouth",
+        "url": "https://media-ice.musicradio.com/SmoothPlymouthMP3"
+      },
+      "global-smooth-scotland": {
+        "title": "Smooth Scotland",
+        "url": "https://media-ice.musicradio.com/SmoothScotlandMP3"
+      },
+      "global-smooth-suffolk": {
+        "title": "Smooth Suffolk",
+        "url": "https://media-ice.musicradio.com/SmoothSuffolkMP3"
+      },
+      "global-smooth-sussex": {
+        "title": "Smooth Sussex",
+        "url": "https://media-ice.musicradio.com/SmoothSussexMP3"
+      },
+      "global-smooth-northwales": {
+        "title": "Smooth North Wales & Cheshire",
+        "url": "https://media-ice.musicradio.com/SmoothNorthWalesMP3"
+      },
+      "global-smooth-southwales": {
+        "title": "Smooth South Wales",
+        "url": "https://media-ice.musicradio.com/SmoothSouthWalesMP3"
+      },
+      "global-smooth-wiltshire": {
+        "title": "Smooth Wiltshire",
+        "url": "https://media-ice.musicradio.com/SmoothWiltshireMP3"
+      }
+	}
+  },
+  "bauer-nat": {
+    "title": "Bauer (National Networks)",
+    "stations": {
+      "bauer-absolute": {
+        "title": "Absolute Radio",
+        "url": "https://stream-ar.planetradio.co.uk/absoluteradiohigh.aac"
+      },
+      "bauer-absolute-60s": {
+        "title": "Absolute Radio 60s",
+        "url": "https://stream-ar.planetradio.co.uk/absolute60s.aac"
+      },
+      "bauer-absolute-70s": {
+        "title": "Absolute Radio 70s",
+        "url": "https://stream-ar.planetradio.co.uk/absolute70s.aac"
+      },
+      "bauer-absolute-80s": {
+        "title": "Absolute Radio 80s",
+        "url": "https://stream-ar.planetradio.co.uk/absolute80s.aac"
+      },
+      "bauer-absolute-90s": {
+        "title": "Absolute Radio 90s",
+        "url": "https://stream-ar.planetradio.co.uk/absolute90s.aac"
+      },
+      "bauer-absolute-00s": {
+        "title": "Absolute Radio 00s",
+        "url": "https://stream-ar.planetradio.co.uk/absolute00s.aac"
+      },
+      "bauer-absolute-10s": {
+        "title": "Absolute Radio 10s",
+        "url": "https://stream-ar.planetradio.co.uk/absolute10s.aac"
+      },
+      "bauer-absolute-classicrock": {
+        "title": "Absolute Radio Classic Rock",
+        "url": "https://stream-ar.planetradio.co.uk/absoluteclassicrock.aac"
+      },
+      "bauer-countryhits": {
+        "title": "Country Hits Radio",
+        "url": "https://stream-al.planetradio.co.uk/countryhits.aac"
+      },
+      "bauer-greatesthits": {
+        "title": "Greatest Hits Radio",
+        "url": "https://stream-mz.planetradio.co.uk/net2national.aac"
+      },
+      "bauer-hits": {
+        "title": "Hits Radio",
+        "url": "https://stream-al.planetradio.co.uk/hits.aac"
+      },
+      "bauer-hits-pride": {
+        "title": "Hits Radio Pride",
+        "url": "https://stream-al.planetradio.co.uk/hitsradiopride.aac"
+      },
+      "bauer-heat": {
+        "title": "Heat Radio",
+        "url": "https://stream-al.planetradio.co.uk/heat.aac"
+      },
+      "bauer-jazzfm": {
+        "title": "Jazz FM",
+        "url": "https://stream-al.planetradio.co.uk/jazzhigh.aac"
+      },
+      "bauer-kerrang": {
+        "title": "Kerrang! Radio",
+        "url": "https://stream-al.planetradio.co.uk/kerrang.aac"
+      },
+      "bauer-kerrang-unleashed": {
+        "title": "Kerrang! Radio Unleashed",
+        "url": "https://stream-al.planetradio.co.uk/heat.aac"
+      },
+      "bauer-kissfm": {
+        "title": "Kiss FM",
+        "url": "https://stream-kiss.planetradio.co.uk/kissnational.aac"
+      },
+      "bauer-kisstory": {
+        "title": "Kisstory",
+        "url": "https://stream-kiss.planetradio.co.uk/kisstory.aac"
+      },
+      "bauer-kiss-fresh": {
+        "title": "Kiss Fresh",
+        "url": "https://stream-kiss.planetradio.co.uk/kissfresh.aac"
+      },
+      "bauer-magic": {
+        "title": "Magic Radio",
+        "url": "https://stream-mz.planetradio.co.uk/magicnational.aac"
+      },
+      "bauer-magic-chilled": {
+        "title": "Magic Chilled",
+        "url": "https://stream-mz.planetradio.co.uk/magicchilled.aac"
+      },
+      "bauer-magic-mellow": {
+        "title": "Mellow Magic",
+        "url": "https://stream-mz.planetradio.co.uk/magicmellow.aac"
+      },
+      "bauer-magic-musicals": {
+        "title": "Magic at the Musicals",
+        "url": "https://stream-mz.planetradio.co.uk/magicmusicalshigh.aac"
+      },
+      "bauer-magic-soul": {
+        "title": "Magic Soul",
+        "url": "https://stream-mz.planetradio.co.uk/magicsoul.aac"
+      },
+      "bauer-planetrock": {
+        "title": "Planet Rock",
+        "url": "https://stream-mz.planetradio.co.uk/planetrock.aac"
+      },
+      "bauer-scala": {
+        "title": "Scala Radio",
+        "url": "https://stream-mz.planetradio.co.uk/scalahigh.aac"
+      }      
+    }
+  },
+  "bauer-loc": {
+    "title": "Bauer (Local Stations)",
+	"local": true,
+    "stations": {
+      "bauer-cfm": {
+        "title": "CFM",
+        "url": "https://stream-al.planetradio.co.uk/cfm.aac"
+      },
+      "bauer-clyde1": {
+        "title": "Clyde 1",
+        "url": "https://stream-al.planetradio.co.uk/clyde1.aac"
+      },
+      "bauer-clyde2": {
+        "title": "Clyde 2",
+        "url": "https://stream-al.planetradio.co.uk/clyde2.aac"
+      },
+      "bauer-forth1": {
+        "title": "Forth 1",
+        "url": "https://stream-al.planetradio.co.uk/forth1.aac"
+      },
+      "bauer-forth2": {
+        "title": "Forth 2",
+        "url": "https://stream-al.planetradio.co.uk/forth2.aac"
+      },
+      "bauer-hallam": {
+        "title": "Hallam FM",
+        "url": "https://stream-al.planetradio.co.uk/hallam.aac"
+      },
+      "bauer-metro": {
+        "title": "Metro Radio",
+        "url": "https://stream-mz.planetradio.co.uk/metro.aac"
+      },
+      "bauer-mfr": {
+        "title": "MFR",
+        "url": "https://stream-mz.planetradio.co.uk/mfrfm.aac"
+      },
+      "bauer-mfr2": {
+        "title": "MFR 2",
+        "url": "https://stream-mz.planetradio.co.uk/mfram.aac"
+      },
+      "bauer-northsound1": {
+        "title": "Northsound 1",
+        "url": "https://stream-mz.planetradio.co.uk/northsound1.aac"
+      },
+      "bauer-northsound2": {
+        "title": "Northsound 2",
+        "url": "https://stream-mz.planetradio.co.uk/northsound2.aac"
+      },
+	    "bauer-pulse1": {
+        "title": "Pulse 1",
+        "url": "https://stream-mz.planetradio.co.uk/net1bradford.aac"
+      },
+      "bauer-radioborders": {
+        "title": "Radio Borders",
+        "url": "https://stream-al.planetradio.co.uk/borders.aac"
+      },
+      "bauer-radiocity": {
+        "title": "Radio City",
+        "url": "https://stream-al.planetradio.co.uk/city.aac"
+      },
+      "bauer-rockfm": {
+        "title": "Rock FM",
+        "url": "https://stream-mz.planetradio.co.uk/rock.aac"
+      },
+      "bauer-signal1": {
+        "title": "Signal 1",
+        "url": "https://stream-mz.planetradio.co.uk/net1stoke.aac"
+      },
+      "bauer-tay": {
+        "title": "Tay FM",
+        "url": "https://stream-mz.planetradio.co.uk/tayfm.aac"
+      },
+      "bauer-tay2": {
+        "title": "Tay 2",
+        "url": "https://stream-mz.planetradio.co.uk/tayam.aac"
+      },
+      "bauer-tfm": {
+        "title": "TFM",
+        "url": "https://stream-mz.planetradio.co.uk/tfm.aac"
+      },
+      "bauer-vikingfm": {
+        "title": "Viking FM",
+        "url": "https://stream-mz.planetradio.co.uk/viking.aac"
+      },
+      "bauer-westfm": {
+        "title": "West FM",
+        "url": "https://stream-mz.planetradio.co.uk/westfm.aac"
+      },
+      "bauer-westsound": {
+        "title": "Westsound",
+        "url": "https://stream-mz.planetradio.co.uk/westsound.aac"
+      },
+      "bauer-coolfm": {
+        "title": "Cool FM",
+        "url": "https://stream-al.planetradio.co.uk/coolfm.aac"
+      },
+      "bauer-downtown": {
+        "title": "Downtown Radio",
+        "url": "https://stream-al.planetradio.co.uk/downtown.aac"
+      },
+      "bauer-downtown-country": {
+        "title": "Downtown Country",
+        "url": "https://stream-al.planetradio.co.uk/downtowncountry.aac"
+      },
+      "bauer-fire": {
+        "title": "Fire Radio (Bournemouth)",
+        "url": "https://stream-mz.planetradio.co.uk/net1bournemouth.aac"
+      },
+      "bauer-free-birmingham": {
+        "title": "Free Radio (Birmingham)",
+        "url": "https://stream-al.planetradio.co.uk/freebirmingham.aac"
+      },
+      "bauer-free-blackcountry": {
+        "title": "Free Radio (Black Country)",
+        "url": "https://stream-al.planetradio.co.uk/freeblackcountry.aac"
+      },
+      "bauer-free-candw": {
+        "title": "Free Radio (Coventry & Warwickshire)",
+        "url": "https://stream-al.planetradio.co.uk/freecoventry.aac"
+      },
+      "bauer-free-handw": {
+        "title": "Free Radio (Herefordshire & Worcestershire)",
+        "url": "https://stream-al.planetradio.co.uk/freehereford.aac"
+      },
+      "bauer-free-shropshire": {
+        "title": "Free Radio (Shropshire)",
+        "url": "https://stream-al.planetradio.co.uk/freeshropshire.aac"
+      },	  
+      "bauer-gem": {
+        "title": "Gem",
+        "url": "https://stream-al.planetradio.co.uk/gem106.aac"
+      },
+      "bauer-lincs": {
+        "title": "Lincs FM",
+        "url": "https://stream-mz.planetradio.co.uk/net1lincoln.aac"
+      },
+	    "bauer-pirate": {
+        "title": "Pirate FM",
+        "url": "https://streaming.ukrd.com/pirate"
+      },
+      "bauer-samfm": {
+        "title": "Sam FM (Bristol)",
+        "url": "https://stream-mz.planetradio.co.uk/net1bristol.aac"
+      },
+      "bauer-thewave": {
+        "title": "The Wave",
+        "url": "https://stream-mz.planetradio.co.uk/net1swansea.aac"
+      },
+      "bauer-wave105": {
+        "title": "Wave 105",
+        "url": "https://stream-mz.planetradio.co.uk/wave105.aac"
+      }
+	}
+  },
+  "bauer-ghr": {
+    "title": "Bauer (Greatest Hits Radio Network)",
+	"local": true,
+    "stations": {
+      "bauer-ghr-national": {
+        "title": "GHR National",
+        "url": "https://stream-mz.planetradio.co.uk/net2national.aac"
+      },
+      "bauer-ghr-bath": {
+        "title": "GHR Bath & the South West",
+        "url": "https://stream-mz.planetradio.co.uk/net2bath.aac"
+      },
+      "bauer-ghr-berkshire": {
+        "title": "GHR Berkshire & North Hampshire",
+        "url": "https://stream-mz.planetradio.co.uk/net2berkshire.aac"
+      },
+      "bauer-ghr-westmids": {
+        "title": "GHR Birmingham & the West Midlands",
+        "url": "https://stream-mz.planetradio.co.uk/net2westmidlands.aac"
+      },
+      "bauer-ghr-blackcountry": {
+        "title": "GHR Black Country & Shropshire",
+        "url": "https://stream-mz.planetradio.co.uk/net2wolverhampton.aac"
+      },
+      "bauer-ghr-bristol": {
+        "title": "GHR Bristol & the South West",
+        "url": "https://stream-mz.planetradio.co.uk/net2bristol.aac"
+      },
+      "bauer-ghr-bucksbedsherts": {
+        "title": "GHR Bucks, Beds & Herts",
+        "url": "https://stream-mz.planetradio.co.uk/net2aylesbury.aac"
+      },
+      "bauer-ghr-cornwall": {
+        "title": "GHR Cornwall",
+        "url": "https://stream-mz.planetradio.co.uk/net2cornwall.aac"
+      },
+      "bauer-ghr-coventry": {
+        "title": "GHR Coventry & Warwickshire",
+        "url": "https://stream-mz.planetradio.co.uk/net2coventry.aac"
+      },
+      "bauer-ghr-devon": {
+        "title": "GHR Devon",
+        "url": "https://stream-mz.planetradio.co.uk/net2devon.aac"
+      },
+      "bauer-ghr-dorset": {
+        "title": "GHR Dorset",
+        "url": "https://stream-mz.planetradio.co.uk/net2dorset.aac"
+      },
+      "bauer-ghr-eastmids": {
+        "title": "GHR East Midlands",
+        "url": "https://stream-mz.planetradio.co.uk/net2eastmidlands.aac"
+      },
+      "bauer-ghr-essex": {
+        "title": "GHR Essex",
+        "url": "https://stream-mz.planetradio.co.uk/net2essex.aac"
+      },
+      "bauer-ghr-gloucester": {
+        "title": "GHR Gloucestershire",
+        "url": "https://stream-mz.planetradio.co.uk/net2gloucester.aac"
+      },
+      "bauer-ghr-manchester": {
+        "title": "GHR Greater Manchester",
+        "url": "https://stream-mz.planetradio.co.uk/magic1152m.aac"
+      },
+      "bauer-ghr-grimsby": {
+        "title": "GHR Grimsby",
+        "url": "https://stream-mz.planetradio.co.uk/net2grimsby.aac"
+      },
+      "bauer-ghr-harrogate": {
+        "title": "GHR Harrogate & the Yorkshire Dales",
+        "url": "https://stream-mz.planetradio.co.uk/net2harrogate.aac"
+      },
+      "bauer-ghr-worcester": {
+        "title": "GHR Hereford & Worcester",
+        "url": "https://stream-mz.planetradio.co.uk/net2worcester.aac"
+      },
+      "bauer-ghr-hull": {
+        "title": "GHR Hull & East Yorkshire",
+        "url": "https://listen-nation.sharp-stream.com/hull.mp3"
+      },
+      "bauer-ghr-ipswich": {
+        "title": "GHR Ipswich & Suffolk",
+        "url": "https://stream-mz.planetradio.co.uk/net2suffolk.aac"
+      },
+      "bauer-ghr-lancs": {
+        "title": "GHR Lancashire",
+        "url": "https://stream-mz.planetradio.co.uk/magic999.aac"
+      },
+      "bauer-ghr-lincs": {
+        "title": "GHR Lincolnshire",
+        "url": "https://stream-mz.planetradio.co.uk/net2national.aac"
+      },
+      "bauer-ghr-liverpool": {
+        "title": "GHR Liverpool & the North West",
+        "url": "https://stream-mz.planetradio.co.uk/magic1548.aac"
+      },
+      "bauer-ghr-london": {
+        "title": "GHR London",
+        "url": "https://stream-mz.planetradio.co.uk/net2national.aac"
+      },
+      "bauer-ghr-": {
+        "title": "GHR Norfolk & North Suffolk",
+        "url": "https://stream-mz.planetradio.co.uk/net2norfolk.aac"
+      },
+      "bauer-ghr-derbyshire": {
+        "title": "GHR North Derbyshire",
+        "url": "https://stream-mz.planetradio.co.uk/net2chesterfield.aac"
+      },
+      "bauer-ghr-northeast": {
+        "title": "GHR North East",
+        "url": "https://stream-mz.planetradio.co.uk/magic1152n.aac"
+      },
+      "bauer-ghr-plymouth": {
+        "title": "GHR Plymouth",
+        "url": "https://stream-mz.planetradio.co.uk/net2plymouth.aac"
+      },
+      "bauer-ghr-salisbury": {
+        "title": "GHR Salisbury",
+        "url": "https://stream-mz.planetradio.co.uk/net2salisbury.aac"
+      },
+      "bauer-ghr-somerset": {
+        "title": "GHR Somerset",
+        "url": "https://stream-mz.planetradio.co.uk/net2somerset.aac"
+      },
+      "bauer-ghr-southcoast": {
+        "title": "GHR South Coast",
+        "url": "https://listen-nation.sharp-stream.com/samfmhampshire.aac"
+      },
+      "bauer-ghr-southwales": {
+        "title": "GHR South Wales",
+        "url": "https://stream-mz.planetradio.co.uk/net2southwales.aac"
+      },
+      "bauer-ghr-southyorks": {
+        "title": "GHR South Yorkshire",
+        "url": "https://stream-mz.planetradio.co.uk/magicam.aac"
+      },
+      "bauer-ghr-stoke": {
+        "title": "GHR Staffordshire & Cheshire",
+        "url": "https://stream-mz.planetradio.co.uk/net2stoke.aac"
+      },
+      "bauer-ghr-rutland": {
+        "title": "GHR Stamford & Rutland",
+        "url": "https://stream-mz.planetradio.co.uk/net2rutland.aac"
+      },
+      "bauer-ghr-surreyehants": {
+        "title": "GHR Surrey & East Hampshire",
+        "url": "https://stream-mz.planetradio.co.uk/net2surrey.aac"
+      },
+      "bauer-ghr-swindon": {
+        "title": "GHR Swindon",
+        "url": "https://stream-mz.planetradio.co.uk/net2swindon.aac"
+      },
+      "bauer-ghr-teesside": {
+        "title": "GHR Teesside",
+        "url": "https://stream-mz.planetradio.co.uk/magic1170.aac"
+      },
+      "bauer-ghr-westnorfolk": {
+        "title": "GHR West Norfolk",
+        "url": "https://stream-mz.planetradio.co.uk/net2westnorfolk.aac"
+      },
+      "bauer-ghr-sussex": {
+        "title": "GHR West Sussex",
+        "url": "https://stream-mz.planetradio.co.uk/net2sussex.aac"
+      },
+      "bauer-ghr-westyorks": {
+        "title": "GHR West Yorkshire",
+        "url": "https://stream-mz.planetradio.co.uk/magic828.aac"
+      },
+      "bauer-ghr-wigan": {
+        "title": "GHR Wigan & St Helens",
+        "url": "https://stream-mz.planetradio.co.uk/net2wigan.aac"
+      },
+      "bauer-ghr-york": {
+        "title": "GHR York & North Yorkshire",
+        "url": "https://stream-mz.planetradio.co.uk/net2york.aac"
+      },
+      "bauer-ghr-yorkshirecoast": {
+        "title": "GHR Yorkshire Coast",
+        "url": "https://stream-mz.planetradio.co.uk/net2yorkshirecoast.aac"
+      }
+	}
+  },
+   "bauer-hitsnet": {
+    "title": "Bauer (Hits Radio Network)",
+	"local": true,
+    "stations": {
+      "bauer-hits-national": {
+        "title": "Hits Radio National",
+        "url": "https://stream-al.planetradio.co.uk/hits.aac"
+      },
+      "bauer-hits-london": {
+        "title": "Hits Radio London",
+        "url": "https://stream-mz.planetradio.co.uk/net1london.aac"
+      },
+      "bauer-hits-manchester": {
+        "title": "Hits Radio Manchester",
+        "url": "https://stream-al.planetradio.co.uk/key.aac"
+      },
+      "bauer-hits-northyorks": {
+        "title": "Hits Radio North Yorkshire",
+        "url": "https://stream-mz.planetradio.co.uk/net1northyorkshire.aac"
+      },
+      "bauer-hits-southcoast": {
+        "title": "Hits Radio South Coast",
+        "url": "https://listen-nation.sharp-stream.com/breeze_soton.mp3"
+      },
+      "bauer-hits-suffolk": {
+        "title": "Hits Radio Suffolk",
+        "url": "https://stream-mz.planetradio.co.uk/net1suffolk.aac"
+      }
+	}
+  },
+  "wireless": {
+    "title": "Wireless (News UK)",
+    "stations": {
+      "wireless-talkradio": {
+        "title": "talkRADIO",
+        "url": "https://radio.talkradio.co.uk/stream"
+      },
+      "wireless-talksport": {
+        "title": "talkSPORT",
+        "url": "https://radio.talksport.com/stream"
+      },
+      "wireless-talksport2": {
+        "title": "talkSPORT 2",
+        "url": "https://radio.talksport.com/stream2"
+      },
+      "wireless-times": {
+        "title": "Times Radio",
+        "url": "https://timesradio.wireless.radio/stream"
+      },
+      "wireless-virgin": {
+        "title": "Virgin Radio",
+        "url": "https://radio.virginradio.co.uk/stream"
+      },
+      "wireless-virgin-anthems": {
+        "title": "Virgin Radio Anthems",
+        "url": "https://radio.virginradio.co.uk/stream-anthems"
+      },
+      "wireless-virgin-chilled": {
+        "title": "Virgin Radio Chilled",
+        "url": "https://radio.virginradio.co.uk/stream-chilled"
+      },
+      "wireless-virgin-groove": {
+        "title": "Virgin Radio Groove",
+        "url": "https://radio.virginradio.co.uk/stream-groove"
+      },
+      "wireless-scottishsun-hits": {
+        "title": "Scottish Sun Hits",
+        "url": "https://gbradio.cdn.tibus.net/SUNHITS"
+      },
+      "wireless-scottishsun-chilled": {
+        "title": "Scottish Sun Chilled",
+        "url": "https://gbradio.cdn.tibus.net/SUNGRTHITS"
+      },
+      "wireless-scottishsun-80s": {
+        "title": "Scottish Sun 80s",
+        "url": "https://gbradio.cdn.tibus.net/80SSUN"
+      }
+    }
+  }
+}
