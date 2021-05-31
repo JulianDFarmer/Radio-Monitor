@@ -35,8 +35,24 @@ function onLoad() {
             $.each(categoryContent["stations"], function(stationName, stationContent) {
                 // Add each station to the page
                 $('#' + categoryName + '>.category-stations').append("<div id='" + stationName + "' class='station'>" + stationContent["title"].replace("(","<br />(") + "</div>");
+                // Add pan controls and associated event listeners
+                $('#' + categoryName + '>.category-stations>#' + stationName).append("<div class='station-pan-controls hidden'><div class='station-pan-l'>L</div><div class='station-pan-r'>R</div></div>");
+                $('#' + categoryName + '>.category-stations>#' + stationName + '>.station-pan-controls>.station-pan-l').click(function(event) {
+                    event.stopPropagation();
+                    if(players[stationName].panR) {
+                        players[stationName].pan(true, false);
+                        $(this).toggleClass('pan-off');
+                    }
+                });
+                $('#' + categoryName + '>.category-stations>#' + stationName + '>.station-pan-controls>.station-pan-r').click(function(event) {
+                    event.stopPropagation();
+                    if(players[stationName].panL) {
+                        players[stationName].pan(false, true);
+                        $(this).toggleClass('pan-off');
+                    }
+                });
                 // Add an empty audio element to the station box.
-                // We'll populate it later on if needed.
+                // We'll populate it later on if neded.
                 $('#' + categoryName + '>.category-stations>#' + stationName).append("<audio></audio>");
                 // Create a player for each station and add it to the players dict
                 players[stationName] = new RadioPlayer(stationName);
@@ -127,6 +143,9 @@ class RadioPlayer {
         }
         this.url = this.stationDict["url"];
         this.audioElement = $("#" + this.stationName + ">audio")[0];
+        this.panControls = $("#" + this.stationName + ">.station-pan-controls")[0];
+        this.panL = true;
+        this.panR = true;
     }
 
     /**
@@ -135,6 +154,7 @@ class RadioPlayer {
      */
     loadPlay(sync=false) {
         var audioElement = this.audioElement;
+        var panControls = this.panControls;
 
         // If 'play multiple' is off, stop all other stations
         // before proceeding...
@@ -147,9 +167,11 @@ class RadioPlayer {
         $(this.audioElement).on('loadstart',function() {
             $(audioElement).parent().removeClass('station-loading station-playing');
             $(audioElement).parent().addClass('station-loading');
+            $(panControls).removeClass('hidden');
         });
         $(this.audioElement).on('pause', function() {
             $(audioElement).parent().removeClass('station-loading station-playing');
+            $(panControls).addClass('hidden');
         });
         $(this.audioElement).on('play playing', function() {
            $(audioElement).parent().removeClass('station-loading station-playing');
@@ -202,6 +224,38 @@ class RadioPlayer {
             this.audioElement.setAttribute('src',this.url);
             this.audioElement.play();
         }
+
+        if(!this.audioCtx) {
+            this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            this.audioCtxSource = this.audioCtx.createMediaElementSource(this.audioElement);
+            this.panNode = this.audioCtx.createStereoPanner();
+            this.audioCtxSource.connect(this.panNode);
+            this.panNode.connect(this.audioCtx.destination);
+        }
+    }
+
+    /**
+     * Sets pan controls for the station
+     * @param toggleL toggle left channel on/off
+     * @param toggleR toggle right channel on/off
+     */
+    pan(toggleL,toggleR) {
+        if(toggleL) {
+            this.panL = !this.panL;
+        }
+        if(toggleR) {
+            this.panR = !this.panR;
+        }
+        var leftValue = 0;
+        var rightValue = 0;
+        if(this.panL) {
+            leftValue = -1;
+        }
+        if(this.panR) {
+            rightValue = 1;
+        }
+        console.log(leftValue+rightValue)
+        this.panNode.pan.setValueAtTime(leftValue+rightValue,this.audioCtx.currentTime);
     }
 
     /**
@@ -213,6 +267,7 @@ class RadioPlayer {
             this.audioElement.setAttribute('src', '');
             $(this.audioElement).off("loadstart play playing pause");
             $(this.audioElement).parent().removeClass('station-loading station-playing');
+            $(this.panControls).addClass('hidden');
             if (this.hls) {
                 this.hlsObj.destroy();
             }
