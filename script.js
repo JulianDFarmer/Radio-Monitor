@@ -226,11 +226,11 @@ class RadioPlayer {
         }
 
         if(!this.audioCtx) {
+            this.audioElement.crossOrigin = "anonymous";
             this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
             this.audioCtxSource = this.audioCtx.createMediaElementSource(this.audioElement);
             this.panNode = this.audioCtx.createStereoPanner();
-            this.audioCtxSource.connect(this.panNode);
-            this.panNode.connect(this.audioCtx.destination);
+            this.audioCtxSource.connect(this.panNode).connect(this.audioCtx.destination);
         }
     }
 
