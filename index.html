@@ -1,14 +1,25 @@
-<html>
-  <head>
+<html lang="en">
+<head>
     <title>Radio Monitor</title>
     <link rel="stylesheet" href="style.css">
     <script src="jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="hls.js"></script>
     <script src="script.js"></script>
-  </head>
-  <body onload="onLoad()">
-    <div id="placeholder">
-      Loading...
+</head>
+<body onload="onLoad()">
+<div class="header">
+    <div class="header-title">Radio Monitor</div>
+    <div class="header-buttons">
+        <div id="btn-sync" class="btn">Sync Playing</div>
+        <div id="btn-stopall" class="btn">Stop All</div>
+        <div id="btn-multi" class="btn">Play Multiple</div>
+        <div id="btn-filter-bbcws" class="btn btn-on">BBC WS</div>
+        <div id="btn-filter-bbcnats" class="btn btn-on">BBC Nations</div>
+        <div id="btn-filter-local" class="btn btn-on">Local Stations</div>
     </div>
-  </body>
+</div>
+<div id="main-container">
+    <div id="temp">Loading stations...</div>
+</div>
+</body>
 </html>

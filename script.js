@@ -1,164 +1,240 @@
 var stations;
-var hlsElements = {};
-var playingElements = {};
-var playOne = true;
+var players = {};
+var multiPlay = false;
 var startFrags = [];
 var readyCount = 0;
 
-function killAll() {
-	for (i in playingElements) {
-		var ele = $(playingElements[i]).parent();
-		ele.click();
-	}	
-}
-
+/**
+ * Populates the page.
+ */
 function onLoad() {
-  $.getJSON("stations.json", function(result) {
-    stations = result;
-    $('body').empty();
-	$('body').append("<div id='header'></div>");
-	$('#header').append("<div id='page-header-title'>Radio Monitor</div>");
-	$('#header').append("<div id='page-header-buttons'></div>");
-	$('#page-header-buttons').append("<div id='sync-button' class='header-button'>Sync Playing</div>");
-	$('#page-header-buttons').append("<div id='kill-button' class='header-button'>Kill All</div>");	
-	$('#page-header-buttons').append("<div id='playone-button' class='header-button'>Play Multiple</div>");	
-	$('#page-header-buttons').append("<div id='filter-bbcws-button' class='header-button button-on'>BBC <br />WS</div>");
-	$('#page-header-buttons').append("<div id='filter-bbcnats-button' class='header-button button-on'>BBC Nations</div>");
-	$('#page-header-buttons').append("<div id='filter-local-button' class='header-button button-on'>Local Stations</div>");
+    $.getJSON("stations.json", function(result) {
+        stations = result;
 
-	$('body').append("<div id='container'></div>");
-	$('#sync-button').on('click', function() {
-		reload(true);
-		$('#sync-button').toggleClass('button-on');
-		setTimeout(function() {
-			$('#sync-button').toggleClass('button-on')
-		}, 100);
-	});
-	$('#playone-button').on('click', function() {
-		$('#playone-button').toggleClass('button-on');
-		playOne = !playOne;
-	});
-	$('#kill-button').on('click', function() {
-		killAll();
-		$('#kill-button').toggleClass('button-on');
-		setTimeout(function() {
-			$('#kill-button').toggleClass('button-on')
-		}, 100);
-	});
-	$('#filter-local-button').on('click', function() {
-		$('.filter-local').toggleClass('hidden');
-		$('#filter-local-button').toggleClass('button-on');
-	});
-	$('#filter-bbcnats-button').on('click', function() {
-		$('.filter-bbcnats').toggleClass('hidden');
-		$('#filter-bbcnats-button').toggleClass('button-on');
-	});
-	$('#filter-bbcws-button').on('click', function() {
-		$('.filter-bbcws').toggleClass('hidden');
-		$('#filter-bbcws-button').toggleClass('button-on');
-	});
-    $.each(stations, function(catname,catcont) {
-      $('#container').append("<div id='" + catname + "' class='category'></div>");
-      $('#' + catname).append("<div class='title'>" + catcont["title"] + "</div>");
-      $('#' + catname).append("<div class='stations'></div>");
-	  if(catcont["local"]) {
-		$('#' + catname).addClass("filter-local");
-	  }
-	  if(catcont["bbcws"]) {
-		$('#' + catname).addClass("filter-bbcws");
-	  }
-	  if(catcont["bbcnations"]) {
-		$('#' + catname).addClass("filter-bbcnats");
-	  }	  
-      $.each(catcont["stations"], function(statname, statcont) {
-        $('#' + catname + '>.stations').append("<div id='" + statname + "' class='station'>" + statcont["title"].replace("(","<br />(") + "</div>");
-        $('#' + catname + '>.stations>#' + statname).append("<audio></audio>");
-        var audio = $('#' + catname + '>.stations>#' + statname + '>audio')[0];
-		$(audio).on('loadstart',function() {
-			if(audio.src != "about:blank") {
-				$(audio).parent().removeClass('loading playing');
-				$(audio).parent().addClass('loading');
-			}
-		});
-		$(audio).on('play playing',function() {
-			$(audio).parent().removeClass('loading playing');
-			$(audio).parent().addClass('playing');
-		});
-		$(audio).on('pause',function() {
-			$(audio).parent().removeClass('loading playing');
-		});
-        $('#' + catname + '>.stations>#' + statname).click(function(d) {
-		  play($(d["target"]).attr('id'));
+        // Remove the loading message
+        $("#temp").remove();
+
+        // Loop through each category
+        $.each(stations, function(categoryName,categoryContent) {
+            // Add each category to the page
+            $('#main-container').append("<div id='" + categoryName + "' class='category'></div>");
+            $('#' + categoryName).append("<div class='category-title'>" + categoryContent["title"] + "</div>");
+            $('#' + categoryName).append("<div class='category-stations'></div>");
+
+            if(categoryContent["local"] == true) {
+                $('#' + categoryName).addClass("category-filter-local");
+            }
+            if(categoryContent["bbcws"] == true) {
+                $('#' + categoryName).addClass("category-filter-bbcws");
+            }
+            if(categoryContent["bbcnations"] == true) {
+                $('#' + categoryName).addClass("category-filter-bbcnats");
+            }
+
+            // Loop through each station in each category
+            $.each(categoryContent["stations"], function(stationName, stationContent) {
+                // Add each station to the page
+                $('#' + categoryName + '>.category-stations').append("<div id='" + stationName + "' class='station'>" + stationContent["title"].replace("(","<br />(") + "</div>");
+                // Add an empty audio element to the station box.
+                // We'll populate it later on if needed.
+                $('#' + categoryName + '>.category-stations>#' + stationName).append("<audio></audio>");
+                // Create a player for each station and add it to the players dict
+                players[stationName] = new RadioPlayer(stationName);
+
+                // If the station is clicked on, start it playing.
+                $('#' + categoryName + '>.category-stations>#' + stationName).click(function(d) {
+                    players[($(d["target"]).attr('id'))].playStop();
+                });
+            });
         });
-      });
     });
-  });
+
+    // Set event handlers for the buttons on the top-right
+    $('#btn-filter-local').on('click', function() {
+        $('.category-filter-local').toggleClass('hidden');
+        $(this).toggleClass('btn-on');
+    });
+    $('#btn-filter-bbcnats').on('click', function() {
+        $('.category-filter-bbcnats').toggleClass('hidden');
+        $(this).toggleClass('btn-on');
+    });
+    $('#btn-filter-bbcws').on('click', function() {
+        $('.category-filter-bbcws').toggleClass('hidden');
+        $(this).toggleClass('btn-on');
+    });
+
+    $('#btn-sync').on('click', function() {
+        syncUp(true);
+        $(this).toggleClass('btn-on');
+        setTimeout(function() {
+            $("#btn-sync").toggleClass('btn-on')
+        }, 100);
+    });
+    $('#btn-multi').on('click', function() {
+        $(this).toggleClass('btn-on');
+        multiPlay = !multiPlay;
+    });
+    $('#btn-stopall').on('click', function() {
+        stopAll();
+        $(this).toggleClass('btn-on');
+        setTimeout(function() {
+            $("#btn-stopall").toggleClass('btn-on')
+        }, 100);
+    });
 }
 
-function play(statname,sync=false) {
-  var catname = $("#" + statname).parent().parent().attr("id");
-  var audio = $("#" + statname + ">audio")[0];
-  if(playingElements[statname]) {
-	if(stations[catname]["stations"][statname]["hls"] && Hls.isSupported()) {
-	  audio.pause();
-	  hlsElements[statname].destroy();
-	  delete hlsElements[statname];
-	  readyCount = 0;
-	} else {
-	  audio.pause();
-	  audio.setAttribute('src','about:blank');
-	}
-	delete playingElements[statname];	
-	$(audio).parent().removeClass('loading playing');			
-  } else {
-	  if(playOne) {
-		killAll();
-	  }			  
-	  if(stations[catname]["stations"][statname]["hls"] && Hls.isSupported()) {
-	  var hls = new Hls();
-	  hls.loadSource(stations[catname]["stations"][statname]["url"]);
-	  hls.attachMedia(audio);
-	  hls.once(Hls.Events.FRAG_LOADED, function(d1,d2) {
-		startFrags.push(d2["frag"]["sn"]);
-	    if(sync) {
-		  if(!allEqual(startFrags)) {
-	       reload(true);
-		   return;
-		  }
-	    }
-	  });
-	  hls.on(Hls.Events.MANIFEST_PARSED, function() {
-	    readyCount++;
-		if(sync) {
-		  if(readyCount==$(".loading").length) {
-			console.log(1);
-			setTimeout(function() {
-			  $.each($(".loading>audio"), function(i,thisAudio) {
-			    thisAudio.play();
-			  });
-			},1000);
-		  }
-		} else{
- 		  audio.play();
-		}
-	  });
-	  hlsElements[statname] = hls;
-	} else {
-	  audio.setAttribute('src',stations[catname]["stations"][statname]["url"]);
-	  audio.play();
-	}
-	playingElements[statname] = audio;
-  }
+/**
+ * Stops all stations that are currently playing.
+ */
+function stopAll() {
+    for(player in players) {
+        players[player].stop();
+    }
 }
 
-function reload(sync=false) {
-  if(sync) {
+/**
+ * Attempts to synchronise playing stations.
+ */
+function syncUp() {
+    readyCount = 0;
     startFrags = [];
-  }
-  $.each(playingElements, function(statname, audio) {
-	play(statname,sync);
-    setTimeout(function(){play(statname,sync);},1000);
-  });
+    for(player in players) {
+        thisPlayer = players[player];
+        if(!thisPlayer.audioElement.paused) {
+            thisPlayer.stop();
+            thisPlayer.loadPlay(true);
+        }
+    }
 }
 
+/**
+ * Plays a radio station.
+ */
+class RadioPlayer {
+    /**
+     * Populate our variables for later use
+     * @param stationName {string} The name of the station as found in the stations dictionary.
+     */
+    constructor(stationName){
+        this.listeners = [];
+        this.hls = false;
+        this.stationName = stationName;
+        this.categoryName = $("#" + this.stationName).parent().parent().attr("id");
+        this.stationDict = stations[this.categoryName]["stations"][stationName];
+        this.stationFullName = this.stationDict["title"];
+        if(this.stationDict["hls"]) {
+            this.hls = true;
+        }
+        this.url = this.stationDict["url"];
+        this.audioElement = $("#" + this.stationName + ">audio")[0];
+    }
+
+    /**
+     * Preps the station for playing, and then starts it playing.
+     * @param sync {boolean} Optional - set true if trying to sync stations using HLS
+     */
+    loadPlay(sync=false) {
+        var audioElement = this.audioElement;
+
+        // If 'play multiple' is off, stop all other stations
+        // before proceeding...
+        if(!multiPlay) {
+            stopAll();
+        }
+
+        // Create event handlers to colour code the station button showing
+        // playing status
+        $(this.audioElement).on('loadstart',function() {
+            $(audioElement).parent().removeClass('station-loading station-playing');
+            $(audioElement).parent().addClass('station-loading');
+        });
+        $(this.audioElement).on('pause', function() {
+            $(audioElement).parent().removeClass('station-loading station-playing');
+        });
+        $(this.audioElement).on('play playing', function() {
+           $(audioElement).parent().removeClass('station-loading station-playing');
+           $(audioElement).parent().addClass('station-playing');
+        });
+
+        // If this station and the client supports hls.js...
+        if (this.hls && Hls.isSupported()) {
+            // Create a new hls.js object
+            this.hlsObj = new Hls();
+            this.hlsObj.loadSource(this.url);
+            this.hlsObj.attachMedia(this.audioElement);
+
+            // Once the first fragment is loaded, push its number to
+            // the startFrags array for sync purposes.
+            this.hlsObj.once(Hls.Events.FRAG_LOADED, function (d1, d2) {
+                startFrags.push(d2["frag"]["sn"]);
+                // If we are trying to sync stations...
+                if (sync) {
+                    // Check if all stations are on the same start frag...
+                    if (!allEqual(startFrags)) {
+                        // ... if not, call the reload function to try again.
+                        syncUp();
+                    }
+                }
+            });
+
+            // Once we're ready to play...
+            this.hlsObj.once(Hls.Events.MANIFEST_PARSED, function () {
+                // Increment the ready counter for sync purposes
+                readyCount++;
+                // If we're trying to sync stations...
+                if (sync) {
+                    // If we're the last station to be ready...
+                    if (readyCount == $(".station-loading").length) {
+                        // ... set all waiting stations playing.
+                        setTimeout(function () {
+                            $.each($(".station-loading>audio"), function (i, thisAudioElement) {
+                                thisAudioElement.play();
+                            });
+                        }, 1000);
+                    }
+                    // If we're not trying to sync, just start playing.
+                } else {
+                    audioElement.play();
+                }
+            });
+        // If the station doesn't use HLS or if hls.js isn't supported...
+        } else {
+            this.audioElement.setAttribute('src',this.url);
+            this.audioElement.play();
+        }
+    }
+
+    /**
+     * Stops the station from playing
+     */
+    stop() {
+        if(!this.audioElement.paused) {
+            this.audioElement.pause();
+            this.audioElement.setAttribute('src', '');
+            $(this.audioElement).off("loadstart play playing pause");
+            $(this.audioElement).parent().removeClass('station-loading station-playing');
+            if (this.hls) {
+                this.hlsObj.destroy();
+            }
+        }
+    }
+
+    /**
+     * Toggles the station between playing and stopped.
+     */
+    playStop(){
+        if(this.audioElement.paused) {
+            this.loadPlay();
+        }
+        else {
+            this.stop();
+        }
+    }
+}
+
+/**
+ * Checks if all elements in an array are the same
+ * @param arr {array} The array to check
+ * @returns {*}
+ */
 const allEqual = arr => arr.every( v => v === arr[0] )
