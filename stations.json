@@ -698,7 +698,7 @@
     "title": "Global / Communicorp (Capital Network)",
 	"local": true,
     "stations": {
-      "global-cap-uk": {
+      "global-cap-uk-1": {
         "title": "Capital UK",
         "url": "https://media-ice.musicradio.com/CapitalUKMP3"
       },
@@ -816,7 +816,7 @@
     "title": "Global / Communicorp (Heart Network)",
 	"local": true,
     "stations": {
-      "global-heart-uk": {
+      "global-heart-uk-1": {
         "title": "Heart UK",
         "url": "https://media-ice.musicradio.com/HeartUKMP3"
       },
@@ -998,7 +998,7 @@
     "title": "Global / Communicorp (Smooth Network)",
 	"local": true,
     "stations": {
-      "global-smooth-uk": {
+      "global-smooth-uk-1": {
         "title": "Smooth UK",
         "url": "https://media-ice.musicradio.com/SmoothUKMP3"
       },
@@ -1371,7 +1371,7 @@
     "title": "Bauer (Greatest Hits Radio Network)",
 	"local": true,
     "stations": {
-      "bauer-ghr-national": {
+      "bauer-ghr-national-1": {
         "title": "GHR National",
         "url": "https://stream-mz.planetradio.co.uk/net2national.aac"
       },
@@ -1553,7 +1553,7 @@
     "title": "Bauer (Hits Radio Network)",
 	"local": true,
     "stations": {
-      "bauer-hits-national": {
+      "bauer-hits-national-1": {
         "title": "Hits Radio National",
         "url": "https://stream-al.planetradio.co.uk/hits.aac"
       },
