@@ -21,6 +21,7 @@ function onLoad() {
             $('#' + categoryName).append("<div class='category-title'>" + categoryContent["title"] + "</div>");
             $('#' + categoryName).append("<div class='category-stations'></div>");
 
+            // Add classes to allow filtering
             if(categoryContent["local"] == true) {
                 $('#' + categoryName).addClass("category-filter-local");
             }
@@ -43,6 +44,7 @@ function onLoad() {
                         players[stationName].pan(true, false);
                         $(this).toggleClass('pan-off');
                     }
+                    updateParams();
                 });
                 $('#' + categoryName + '>.category-stations>#' + stationName + '>.station-pan-controls>.station-pan-r').click(function(event) {
                     event.stopPropagation();
@@ -50,6 +52,7 @@ function onLoad() {
                         players[stationName].pan(false, true);
                         $(this).toggleClass('pan-off');
                     }
+                    updateParams();
                 });
                 // Add an empty audio element to the station box.
                 // We'll populate it later on if neded.
@@ -63,22 +66,25 @@ function onLoad() {
                 });
             });
         });
+        getParams();
     });
 
     // Set event handlers for the buttons on the top-right
     $('#btn-filter-local').on('click', function() {
         $('.category-filter-local').toggleClass('hidden');
         $(this).toggleClass('btn-on');
+        updateParams();
     });
     $('#btn-filter-bbcnats').on('click', function() {
         $('.category-filter-bbcnats').toggleClass('hidden');
         $(this).toggleClass('btn-on');
+        updateParams();
     });
     $('#btn-filter-bbcws').on('click', function() {
         $('.category-filter-bbcws').toggleClass('hidden');
         $(this).toggleClass('btn-on');
+        updateParams();
     });
-
     $('#btn-sync').on('click', function() {
         syncUp(true);
         $(this).toggleClass('btn-on');
@@ -89,9 +95,11 @@ function onLoad() {
     $('#btn-multi').on('click', function() {
         $(this).toggleClass('btn-on');
         multiPlay = !multiPlay;
+        updateParams();
     });
     $('#btn-stopall').on('click', function() {
         stopAll();
+        updateParams();
         $(this).toggleClass('btn-on');
         setTimeout(function() {
             $("#btn-stopall").toggleClass('btn-on')
@@ -121,6 +129,146 @@ function syncUp() {
             thisPlayer.loadPlay(true);
         }
     }
+}
+
+/**
+ * Retrieves URL parameters and applies the settings to the page.
+ * If there are stations to start playing, we need user interaction
+ * before we can start audio. In this case, this function will put
+ * up an overlay for the user to click on, and then return without applying
+ * any settings at all.
+ *
+ * When the user clicks on the overlay, this function is called again but
+ * with applyStations set to true - in this case, it will apply all settings
+ * now that we've had user interaction.
+ * @param applyStations Should we apply settings if there are stations to play?
+ */
+function getParams(applyStations = false) {
+    // Grab the raw parameters from the URL and split them into an array
+    var params = decodeURIComponent(location.search).split("?")[1].split("&");
+    // Loop through each parameter
+   for (param in params) {
+        // Separate the key from the value
+        var thisParam = params[param].split("=");
+        var variable = thisParam[0].toLowerCase();
+        var value = thisParam[1].toLowerCase();
+
+        // If the user has passed any stations to play...
+        if (variable == "stations") {
+            // Check if they've passed true - ie check if
+            // there's been any user interaction
+            if(applyStations) {
+                // Hide the overlay
+                $("#overlay").addClass("hidden");
+                var stationsList = value.toLowerCase().split(',');
+                var i = 0;
+                // Go through each entry given...
+                for (station in stationsList) {
+                    var thisStation = stationsList[station].trim();
+                    // If this entry is a pan instruction, apply the
+                    // panning to the previous entry (ie a station)
+                    if (thisStation == "l" && i > 0) {
+                        $("#" + stationsList[i - 1] + ">.station-pan-controls>.station-pan-r").click();
+                    } else if (thisStation == "r" && i > 0) {
+                        $("#" + stationsList[i - 1] + ">.station-pan-controls>.station-pan-l").click();
+                    // Otherwise, assume this entry is a station
+                    } else {
+                        $("#" + thisStation).click();
+                    }
+                    i++;
+                }
+                // Synchronise all loaded stations
+                syncUp();
+            // If we've been given stations to play but we've not
+            // yet had user interaction...
+            } else {
+                // Display the overlay and set an event handler for
+                // the user clicking on it.
+                $("#overlay").removeClass("hidden");
+                $("#overlay").one("click", function() {
+                    // Call this function again but pass true to load
+                    // the stations now we've had user interaction
+                    getParams(true);
+                });
+                return;
+            }
+        }
+        // Handle settings that have been passed by the user
+        else if (variable == "filterlocal") {
+            if(value=="true") {
+                $("#btn-filter-local").click();
+            }
+        }
+        else if (variable == "filternations") {
+            if(value=="true") {
+                $("#btn-filter-bbcnats").click();
+            }
+        }
+        else if (variable == "filterws") {
+            if(value=="true") {
+                $("#btn-filter-bbcws").click();
+                console.log("Filter WS");
+            }
+        }
+        else if (variable == "playmulti") {
+            if(value=="true") {
+                $("#btn-multi").click();
+            }
+        }
+    }
+}
+
+/**
+ * Updates the URL parameters based on settings / stations being
+ * listened to. This should be called every time something is changed
+ * and allows a user to share or bookmark the URL to recall the current
+ * state of the page.
+ */
+function updateParams() {
+    var playMulti = multiPlay;
+    var filterWS = !$("#btn-filter-bbcws").hasClass("btn-on");
+    var filterNations = !$("#btn-filter-bbcnats").hasClass("btn-on");
+    var filterLocal = !$("#btn-filter-local").hasClass("btn-on");
+    var stations = [];
+
+    console.log("1");
+    $(".station-playing").each(function() {
+        console.log($(this));
+        var panL = !$(this).children(".station-pan-controls").children(".station-pan-l").hasClass("pan-off");
+        var panR = !$(this).children(".station-pan-controls").children(".station-pan-r").hasClass("pan-off");
+        stations.push($(this).attr("id"));
+        if(panL && !panR) {
+            stations.push('l');
+        }
+        else if(!panL && panR) {
+            stations.push('r');
+        }
+    });
+
+    console.log(stations);
+
+    var paramString = "?"
+    if(stations.length) {
+        paramString += "stations=" + stations.join(",") + "&";
+    }
+    if(filterWS) {
+        paramString += "filterWS=true&";
+    }
+    if(filterNations) {
+        paramString += "filterNations=true&";
+    }
+    if(filterLocal) {
+        paramString += "filterLocal=true&";
+    }
+    if(playMulti) {
+        paramString += "playmulti=true&";
+    }
+
+    if(paramString.slice(-1)=="&") {
+        paramString = paramString.slice(0,-1);
+    }
+
+    history.pushState({},null,paramString);
 }
 
 /**
@@ -168,14 +316,17 @@ class RadioPlayer {
             $(audioElement).parent().removeClass('station-loading station-playing');
             $(audioElement).parent().addClass('station-loading');
             $(panControls).removeClass('hidden');
+            updateParams();
         });
         $(this.audioElement).on('pause', function() {
             $(audioElement).parent().removeClass('station-loading station-playing');
             $(panControls).addClass('hidden');
+            updateParams();
         });
         $(this.audioElement).on('play playing', function() {
            $(audioElement).parent().removeClass('station-loading station-playing');
            $(audioElement).parent().addClass('station-playing');
+           updateParams();
         });
 
         // If this station and the client supports hls.js...
