@@ -8,6 +8,9 @@ var readyCount = 0;
  * Populates the page.
  */
 function onLoad() {
+
+    window.AudioContext = window.AudioContext||window.webkitAudioContext;
+
     $.getJSON("stations.json", function(result) {
         stations = result;
 
