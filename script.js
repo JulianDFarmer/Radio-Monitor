@@ -128,23 +128,30 @@ function stopAll() {
  * Attempts to synchronise playing stations.
  */
 function syncUp() {
+    // Reset the ready count and fragment array
     readyCount = 0;
     startFrags = [];
-    console.log(players.length);
+    // Go through every single player
     $.each(players, function(index,player) {
+        // Only continue if this player is playing
         if(player.hlsObj) {
+            // Stop it, and restart it but in sync mode
             player.stop();
             player.loadPlay(true);
         }
     });
 }
 
+/**
+ * When attempting to synchronise playing stations, each station
+ * will call this function in turn when they are ready. When the last
+ * one calls it, they will all be set playing simultaneously.
+ */
 function syncReady() {
     readyCount++;
-
     // If all stations are ready...
     if (readyCount == $(".station-loading").length) {
-        // Check if all stations are on the same start frag...
+        // Check if all stations are on the same start fragment...
         console.log(allEqual(startFrags));
         console.log(startFrags.length);
         if (!allEqual(startFrags)) {
