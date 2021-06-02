@@ -10,7 +10,6 @@ var webAudio = true;
  */
 function onLoad() {
 
-    window.AudioContext = window.AudioContext||window.webkitAudioContext;
     webAudio = webAudioSupported();
 
     $.getJSON("stations.json", function(result) {
