@@ -468,6 +468,6 @@ function webAudioSupported() {
     return true;
 }
 
-function isiOS {
+function isiOS() {
     return !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 }
