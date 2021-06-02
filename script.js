@@ -4,6 +4,7 @@ var multiPlay = false;
 var startFrags = [];
 var readyCount = 0;
 var webAudio = true;
+var iOS = false;
 
 /**
  * Populates the page.
@@ -11,6 +12,7 @@ var webAudio = true;
 function onLoad() {
 
     webAudio = webAudioSupported();
+    iOS = isiOS();
 
     $.getJSON("stations.json", function(result) {
         stations = result;
@@ -338,14 +340,14 @@ class RadioPlayer {
         $(this.audioElement).on('loadstart',function() {
             $(audioElement).parent().removeClass('station-loading station-playing');
             $(audioElement).parent().addClass('station-loading');
-            if(webAudio) {
+            if(webAudio || iOS) {
                 $(panControls).removeClass('hidden');
             }
             updateParams();
         });
         $(this.audioElement).on('pause', function() {
             $(audioElement).parent().removeClass('station-loading station-playing');
-            if(webAudio) {
+            if(webAudio || iOS) {
                 $(panControls).addClass('hidden');
             }
             updateParams();
@@ -464,4 +466,8 @@ function webAudioSupported() {
       return false;
     }
     return true;
+}
+
+function isiOS {
+    return !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 }
