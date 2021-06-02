@@ -11,6 +11,8 @@ var iOS = false;
  */
 function onLoad() {
 
+    // Check whether the user supports Web Audio and whether
+    // they are on iOS (for panning support)
     webAudio = webAudioSupported();
     iOS = isiOS();
 
@@ -340,6 +342,8 @@ class RadioPlayer {
         $(this.audioElement).on('loadstart',function() {
             $(audioElement).parent().removeClass('station-loading station-playing');
             $(audioElement).parent().addClass('station-loading');
+            // Only show pan controls if the user supports Web Audio
+            // and if they're not on iOS
             if(webAudio && !iOS) {
                 $(panControls).removeClass('hidden');
             }
@@ -347,6 +351,8 @@ class RadioPlayer {
         });
         $(this.audioElement).on('pause', function() {
             $(audioElement).parent().removeClass('station-loading station-playing');
+            // Only show pan controls if the user supports Web Audio
+            // and if they're not on iOS
             if(webAudio && !iOS) {
                 $(panControls).addClass('hidden');
             }
@@ -459,6 +465,10 @@ function allEqual(arr) {
     });
 }
 
+/**
+ * Checks if the Web Audio API is supported
+ * @returns {boolean} Is Web Audio supported?
+ */
 function webAudioSupported() {
     try {
         context = new AudioContext();
@@ -468,6 +478,10 @@ function webAudioSupported() {
     return true;
 }
 
+/**
+ * Checks if the user is on iOS
+ * @returns {boolean} Is the user on iOS?
+ */
 function isiOS() {
     return !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 }
