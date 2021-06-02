@@ -421,6 +421,7 @@ class RadioPlayer {
                 this.hlsObj.destroy();
                 delete this.hlsObj;
             }
+            updateParams();
         }
     }
 
