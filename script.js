@@ -3,6 +3,7 @@ var players = {};
 var multiPlay = false;
 var startFrags = [];
 var readyCount = 0;
+var webAudio = true;
 
 /**
  * Populates the page.
@@ -10,6 +11,7 @@ var readyCount = 0;
 function onLoad() {
 
     window.AudioContext = window.AudioContext||window.webkitAudioContext;
+    webAudio = webAudioSupported();
 
     $.getJSON("stations.json", function(result) {
         stations = result;
@@ -337,12 +339,16 @@ class RadioPlayer {
         $(this.audioElement).on('loadstart',function() {
             $(audioElement).parent().removeClass('station-loading station-playing');
             $(audioElement).parent().addClass('station-loading');
-            $(panControls).removeClass('hidden');
+            if(webAudio) {
+                $(panControls).removeClass('hidden');
+            }
             updateParams();
         });
         $(this.audioElement).on('pause', function() {
             $(audioElement).parent().removeClass('station-loading station-playing');
-            $(panControls).addClass('hidden');
+            if(webAudio) {
+                $(panControls).addClass('hidden');
+            }
             updateParams();
         });
         $(this.audioElement).on('play playing', function() {
@@ -450,4 +456,13 @@ function allEqual(arr) {
     return arr.every(function(n) {
        return n == arr[0];
     });
+}
+
+function webAudioSupported() {
+    try {
+        context = new AudioContext();
+    } catch {
+      return false;
+    }
+    return true;
 }
