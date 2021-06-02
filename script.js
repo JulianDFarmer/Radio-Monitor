@@ -122,11 +122,35 @@ function stopAll() {
 function syncUp() {
     readyCount = 0;
     startFrags = [];
-    for(player in players) {
-        thisPlayer = players[player];
-        if(!thisPlayer.audioElement.paused) {
-            thisPlayer.stop();
-            thisPlayer.loadPlay(true);
+    console.log(players.length);
+    $.each(players, function(index,player) {
+        if(player.hlsObj) {
+            player.stop();
+            player.loadPlay(true);
+        }
+    });
+}
+
+function syncReady() {
+    readyCount++;
+
+    // If all stations are ready...
+    if (readyCount == $(".station-loading").length) {
+        // Check if all stations are on the same start frag...
+        console.log(allEqual(startFrags));
+        console.log(startFrags.length);
+        if (!allEqual(startFrags)) {
+            // ... if not, call the reload function to try again.
+            setTimeout(function() {
+                syncUp();
+            },500);
+        } else {
+            // ... if they are, set all waiting stations playing.
+            setTimeout(function () {
+                $.each($(".station-loading>audio"), function (i, thisAudioElement) {
+                    thisAudioElement.play();
+                });
+            }, 100);
         }
     }
 }
@@ -207,7 +231,6 @@ function getParams(applyStations = false) {
         else if (variable == "filterws") {
             if(value=="true") {
                 $("#btn-filter-bbcws").click();
-                console.log("Filter WS");
             }
         }
         else if (variable == "playmulti") {
@@ -231,9 +254,7 @@ function updateParams() {
     var filterLocal = !$("#btn-filter-local").hasClass("btn-on");
     var stations = [];
 
-    console.log("1");
     $(".station-playing").each(function() {
-        console.log($(this));
         var panL = !$(this).children(".station-pan-controls").children(".station-pan-l").hasClass("pan-off");
         var panR = !$(this).children(".station-pan-controls").children(".station-pan-r").hasClass("pan-off");
         stations.push($(this).attr("id"));
@@ -244,8 +265,6 @@ function updateParams() {
             stations.push('r');
         }
     });
-
-    console.log(stations);
 
     var paramString = "?"
     if(stations.length) {
@@ -340,33 +359,13 @@ class RadioPlayer {
             // the startFrags array for sync purposes.
             this.hlsObj.once(Hls.Events.FRAG_LOADED, function (d1, d2) {
                 startFrags.push(d2["frag"]["sn"]);
-                // If we are trying to sync stations...
-                if (sync) {
-                    // Check if all stations are on the same start frag...
-                    if (!allEqual(startFrags)) {
-                        // ... if not, call the reload function to try again.
-                        syncUp();
-                    }
-                }
-            });
-
-            // Once we're ready to play...
-            this.hlsObj.once(Hls.Events.MANIFEST_PARSED, function () {
-                // Increment the ready counter for sync purposes
-                readyCount++;
                 // If we're trying to sync stations...
-                if (sync) {
-                    // If we're the last station to be ready...
-                    if (readyCount == $(".station-loading").length) {
-                        // ... set all waiting stations playing.
-                        setTimeout(function () {
-                            $.each($(".station-loading>audio"), function (i, thisAudioElement) {
-                                thisAudioElement.play();
-                            });
-                        }, 1000);
-                    }
-                    // If we're not trying to sync, just start playing.
+                if(sync) {
+                    // Call syncReady() to show this station is ready
+                    //syncReady();
+                    syncReady();
                 } else {
+                    // If we're not trying to sync, just start playing.
                     audioElement.play();
                 }
             });
@@ -405,7 +404,6 @@ class RadioPlayer {
         if(this.panR) {
             rightValue = 1;
         }
-        console.log(leftValue+rightValue)
         this.panNode.pan.setValueAtTime(leftValue+rightValue,this.audioCtx.currentTime);
     }
 
@@ -421,6 +419,7 @@ class RadioPlayer {
             $(this.panControls).addClass('hidden');
             if (this.hls) {
                 this.hlsObj.destroy();
+                delete this.hlsObj;
             }
         }
     }
@@ -443,4 +442,8 @@ class RadioPlayer {
  * @param arr {array} The array to check
  * @returns {*}
  */
-const allEqual = arr => arr.every( v => v === arr[0] )
+function allEqual(arr) {
+    return arr.every(function(n) {
+       return n == arr[0];
+    });
+}
