@@ -340,14 +340,14 @@ class RadioPlayer {
         $(this.audioElement).on('loadstart',function() {
             $(audioElement).parent().removeClass('station-loading station-playing');
             $(audioElement).parent().addClass('station-loading');
-            if(webAudio || iOS) {
+            if(webAudio || !iOS) {
                 $(panControls).removeClass('hidden');
             }
             updateParams();
         });
         $(this.audioElement).on('pause', function() {
             $(audioElement).parent().removeClass('station-loading station-playing');
-            if(webAudio || iOS) {
+            if(webAudio || !iOS) {
                 $(panControls).addClass('hidden');
             }
             updateParams();
